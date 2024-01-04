@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Rock <br>Paper <br>Scissors</div>
+            <div class="score">
+                <div class="computer-score">
+                    <div class="computer-score-title">COMPUTER SCORE</div>
+                    <div class="computer-score-number">0</div>
+                </div>
+                <div class="your-score">
+                    <div class="your-score-title">YOUR <br> SCORE</div>
+                    <div class="your-score-number">0</div>
+                </div>
+            </div>
+        </div>
+        <section class="game">
+            <button class="choice-btn" data-choice="rock">
+                <div class="choice rock">
+                    <img src="images/rock.png" alt="Rock">
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="scissors">
+                <div class="choice scissors">
+                    <img src="images/scissors.png" alt="Scissors">
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="paper">
+                <div class="choice paper">
+                    <img src="images/paper.png" alt="Paper">
+                </div>
+            </button>
+        </section>
+    </div>
+    <section class="results hidden">
+        <h2 class="results-heading">You picked</h2>
+        <h2 class="results-heading">PC picked</h2>
+        <div class="results-result"></div>
+        <div class="results-winner hidden">
+            <h3 class="results-text"></h3>
+            <button class="play-again">play again</button>
+        </div>
+        <div class="results-result"></div>
+    </section>
+    <button class="rules-btn" tabindex="1">rules</button>
+    <button class="next-btn hidden">next</button>
+
+    <div class="congrats hidden">
+        <img src="images/champion.png" alt="Champion Trophy" class="champion">
+        <h1>Hurray <br>You won the game</h1>
+        <button class="play-again-2">play again</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Game Rules</div>
+            <button data-close-button class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock,
+                    paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="script.js"></script>
+
+</html>
